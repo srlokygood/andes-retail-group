@@ -19,7 +19,7 @@ Using a transactional dataset covering sales across **Peru, Chile, and Colombia*
 > *The Overview page is engineered to answer high-level executive questions: How is the business performing overall? Where are sales coming from? What is the trend across time?*
 
 <!-- PLACEHOLDER FOR OVERVIEW IMAGE -->
-![Overview Dashboard](<img width="1152" height="650" alt="image" src="https://github.com/user-attachments/assets/f8d2645d-1523-442f-b04b-fac323faecde" />)
+![Overview Dashboard](images/overview.png)
 
 #### 🔍 Explanation of Overview Components:
 * **Executive KPI Cards:** Top-level indicators tracking **Total Revenue ($5.532M)**, **Total Cost ($3.590M)**, and **Units Sold (57.601K)** to establish immediate financial context[cite: 5].
@@ -36,7 +36,7 @@ Using a transactional dataset covering sales across **Peru, Chile, and Colombia*
 > *The Detail View enables root-cause exploration: Why did revenue drop during specific periods? Which customer segments and product verticals drove the contraction in 2025?*
 
 <!-- PLACEHOLDER FOR DETAIL VIEW IMAGE -->
-![Detail View Dashboard](<img width="1061" height="644" alt="image" src="https://github.com/user-attachments/assets/371653a9-b127-43d9-8c54-5b8f03525d8c" />)
+![Detail View Dashboard](images/deatilview.png)
 
 #### 🔍 Explanation of Detail View Components:
 * **Seasonal Comparison (`Ingresos Totales por temporada 2024 vs 2025`):** Line chart comparing cumulative revenue per season[cite: 8]. It proves that performance was virtually identical in Winter, Autumn, and Spring, isolating the YoY revenue gap entirely to the **Summer** season[cite: 8].
@@ -46,7 +46,7 @@ Using a transactional dataset covering sales across **Peru, Chile, and Colombia*
 * **Category x Customer Segment Cross-Analysis (`Ingresos totales de cada categoría por segmento de cliente`):**
   
   <!-- PLACEHOLDER FOR FILTERED DETAIL VIEW IMAGE -->
-  ![Detail View Filtered 2025](<img width="265" height="203" alt="image" src="https://github.com/user-attachments/assets/87f6e8de-ddf4-407e-b962-978e74e31cff" />)
+  ![Detail View Filtered 2025](images/filter2025.png)
 
   * *Diagnostic Finding:* When filtering by **2025**, this chart exposes that the Premium segment's reduction in spend directly impacted **Home, Electronics, and Clothing**, while the **Sports** category remained resilient[cite: 8, 9].
 
