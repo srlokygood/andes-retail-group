@@ -36,7 +36,7 @@ Using a transactional dataset covering sales across **Peru, Chile, and Colombia*
 > *The Detail View enables root-cause exploration: Why did revenue drop during specific periods? Which customer segments and product verticals drove the contraction in 2025?*
 
 <!-- PLACEHOLDER FOR DETAIL VIEW IMAGE -->
-![Detail View Dashboard](images/deatilview.png)
+![Detail View Dashboard](images/detailview.png)
 
 #### 🔍 Explanation of Detail View Components:
 * **Seasonal Comparison (`Ingresos Totales por temporada 2024 vs 2025`):** Line chart comparing cumulative revenue per season[cite: 8]. It proves that performance was virtually identical in Winter, Autumn, and Spring, isolating the YoY revenue gap entirely to the **Summer** season[cite: 8].
