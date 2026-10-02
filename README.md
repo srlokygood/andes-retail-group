@@ -4,6 +4,21 @@ This repository contains a comprehensive **Business Intelligence & Data Analysis
 
 ---
 
+## 🛠️ Tech Stack & Tools Used
+
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![DAX](https://img.shields.io/badge/DAX-Data_Analysis_Expressions-00599C?style=for-the-badge)
+![Generative AI](https://img.shields.io/badge/Generative_AI-Gemini_&_ChatGPT-742774?style=for-the-badge&logo=openai&logoColor=white)
+![Markdown](https://img.shields.io/badge/Markdown-Documentation-000000?style=for-the-badge&logo=markdown&logoColor=white)
+![Git](https://img.shields.io/badge/Git-Repository_Management-F05032?style=for-the-badge&logo=git&logoColor=white)
+
+* **`Power BI Desktop`**: End-to-end data modeling, DAX measures, interactive dashboard design, and UI/UX optimization.
+* **`DAX (Data Analysis Expressions)`**: Custom measures for time-intelligence, interannual comparisons (YoY), and conditional formatting logic.
+* **`Generative AI / LLM Assistance`**: Applied AI for data interpretation, SCQA storytelling structuring, root-cause hypothesis generation, and executive asynchronous report crafting.
+* **`Markdown & Git`**: Professional documentation and version control for GitHub repository hosting.
+
+---
+
 ## 📌 Executive Summary & Context
 
 Using a transactional dataset covering sales across **Peru, Chile, and Colombia**, an interactive analytics solution was designed with two distinct operational levels:
