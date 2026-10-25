@@ -1,10 +1,8 @@
-# 📊 Sales Performance & Diagnostic Analysis Dashboard (Power BI)
+# Diagnosing the 2025 Revenue Decline in a Three-Country Retail Business
 
-This repository contains a comprehensive **Business Intelligence & Data Analysis** project developed in Power BI. The primary objective is to evaluate the commercial performance of a retail business over a two-year period (2024–2025), diagnosing root causes behind revenue variations and delivering actionable strategic recommendations.
+A Power BI analysis of 2024–2025 retail sales in Peru, Chile and Colombia to find out why 2025 revenue fell. Revenue followed the same seasonal curve in both years, so the decline was not structural. It traces to the Summer season and to Premium customers, who generate 46.97% of the $5.532M total revenue and cut spending on Home, Electronics and Clothing.
 
----
-
-## 🛠️ Tech Stack & Tools Used
+![Overview Dashboard](images/overview.png)
 
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 ![DAX](https://img.shields.io/badge/DAX-Data_Analysis_Expressions-00599C?style=for-the-badge)
@@ -12,88 +10,74 @@ This repository contains a comprehensive **Business Intelligence & Data Analysis
 ![Markdown](https://img.shields.io/badge/Markdown-Documentation-000000?style=for-the-badge&logo=markdown&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-Repository_Management-F05032?style=for-the-badge&logo=git&logoColor=white)
 
-* **`Power BI Desktop`**: End-to-end data modeling, DAX measures, interactive dashboard design, and UI/UX optimization.
-* **`DAX (Data Analysis Expressions)`**: Custom measures for time-intelligence, interannual comparisons (YoY), and conditional formatting logic.
-* **`Generative AI / LLM Assistance`**: Applied AI for data interpretation, SCQA storytelling structuring, root-cause hypothesis generation, and executive asynchronous report crafting.
-* **`Markdown & Git`**: Professional documentation and version control for GitHub repository hosting.
+## Business Question
 
----
+Management needed to know whether the 2025 revenue decline signaled a structural collapse or a temporary pattern. They also needed to know where it came from (season, customer segment or product category) and what to do about it.
 
-## 📌 Executive Summary & Context
+The solution has two levels:
 
-Using a transactional dataset covering sales across **Peru, Chile, and Colombia**, an interactive analytics solution was designed with two distinct operational levels:
-1. **Overview Dashboard:** Designed for executive decision-making (C-Suite / Management), providing a macro view of financial health, year-over-year (YoY) trends, and high-level business distribution.
-2. **Diagnostic Detail View:** Built for deep exploratory analysis to identify the root causes of revenue fluctuations across seasons, customer segments, and product categories.
+1. **Overview Dashboard:** a macro view for executives covering financial health, year-over-year (YoY) trends and business distribution.
+2. **Detail View:** an exploratory view that isolates the root causes of revenue fluctuations.
 
----
+## Data
 
-## 🖥️ Dashboard Architecture & Visual Walkthrough
+- **Source:** transactional retail sales dataset (source name not specified).
+- **Coverage:** sales in Peru, Chile and Colombia, 2024–2025.
+- **Volume:** 57,601 units sold, $5.532M total revenue, $3.590M total cost.
+- **Dimensions analyzed:** country, product category, customer segment (Premium, Standard, Budget) and season.
 
-### 1. Overview Dashboard (Vista General)
+## Process
 
-> *The Overview page is engineered to answer high-level executive questions: How is the business performing overall? Where are sales coming from? What is the trend across time?*
+1. **Exploratory phase and metric framing:** defined the core KPIs and the business dimensions (country, category, customer tier, seasonality).
+2. **Iterative design and UX refinement:** overlaid 2024 and 2025 monthly revenue on one 12-month axis to test for a structural decline and confirm recurring seasonality.
+3. **Root-cause diagnostics:** used cross-filtering in the Detail View to narrow the drop to Summer, then Premium clients, then the Home, Electronics and Clothing categories.
+4. **Strategic SCQA formulation:** synthesized the findings into executive-ready communication (Situation, Complication, Question, Answer), with generative AI used to help structure the storytelling and generate root-cause hypotheses.
 
-<!-- PLACEHOLDER FOR OVERVIEW IMAGE -->
-![Overview Dashboard](images/overview.png)
+**Data model:** *(add star schema image, e.g. `images/data-model.png`)*
 
-#### 🔍 Explanation of Overview Components:
-* **Executive KPI Cards:** Top-level indicators tracking **Total Revenue ($5.532M)**, **Total Cost ($3.590M)**, and **Units Sold (57.601K)** to establish immediate financial context[cite: 5].
-* **Time-Series Revenue Trend (2024 vs. 2025):** Overlaid monthly line charts on a single 12-month axis[cite: 5]. This chart demonstrates that sales follow a highly predictable, cyclical seasonal curve across both years rather than suffering a structural annual collapse[cite: 5].
-* **Geographic & Category Distribution:**
-  * **By Country:** Identifies **Peru** as the top revenue contributor ($2.2M+), followed closely by **Chile** ($2.0M+) and **Colombia** ($1.3M+)[cite: 5].
-  * **By Product Category:** Highlights **Sports** ($1.4M+) as the primary revenue engine, supported by Electronics, Home, and Clothing[cite: 5].
-* **Customer Segment Breakdown:** Donut chart revealing high revenue concentration, where **Premium** ($2.598M / 46.97%) and **Standard** ($2.436M / 44.05%) customers generate **91.02% of total sales**, leaving Budget/Economic clients with only 8.98% ($497K)[cite: 5].
+**Main DAX measures:** *(add 1–2 code examples, e.g. total revenue, YoY comparison)*
 
----
+### Dashboard Walkthrough
 
-### 2. Diagnostic Detail View (Vista Detalle)
+**Overview Dashboard**
 
-> *The Detail View enables root-cause exploration: Why did revenue drop during specific periods? Which customer segments and product verticals drove the contraction in 2025?*
+- **Executive KPI cards:** Total Revenue ($5.532M), Total Cost ($3.590M) and Units Sold (57.601K).
+- **Revenue trend (2024 vs. 2025):** monthly lines overlaid on one axis show a predictable seasonal cycle in both years.
+- **Distribution:** Peru leads revenue ($2.2M+), followed by Chile ($2.0M+) and Colombia ($1.3M+). Sports is the top category ($1.4M+), followed by Electronics, Home and Clothing.
+- **Customer segments:** Premium ($2.598M, 46.97%) and Standard ($2.436M, 44.05%) generate 91.02% of sales. Budget clients contribute 8.98% ($497K).
 
-<!-- PLACEHOLDER FOR DETAIL VIEW IMAGE -->
+**Detail View**
+
 ![Detail View Dashboard](images/detailview.png)
 
-#### 🔍 Explanation of Detail View Components:
-* **Seasonal Comparison (`Ingresos Totales por temporada 2024 vs 2025`):** Line chart comparing cumulative revenue per season[cite: 8]. It proves that performance was virtually identical in Winter, Autumn, and Spring, isolating the YoY revenue gap entirely to the **Summer** season[cite: 8].
-* **Monthly Segment Timeline (`Línea de tiempo de los ingresos totales por segmento de cliente`):** Multi-line timeline tracking monthly spend across customer tiers, highlighting key periods where Premium spending dipped below Standard accounts[cite: 8].
-* **Interannual Segment Comparison (`Ingresos Totales por cada segmento de clientes 2024 vs 2025`):** Grouped bar chart showing that overall revenue contraction in 2025 was driven specifically by reduced spending in the **Premium** segment[cite: 8].
-* **Interannual Category Comparison (`Ingresos totales de cada categoría 2024 vs 2025`):** Bar chart detailing the performance distribution across product lines (Sports, Electronics, Home, Clothing)[cite: 8].
-* **Category x Customer Segment Cross-Analysis (`Ingresos totales de cada categoría por segmento de cliente`):**
-  
-  <!-- PLACEHOLDER FOR FILTERED DETAIL VIEW IMAGE -->
-  ![Detail View Filtered 2025](images/filter2025.png)
+- **Seasonal comparison:** Winter, Autumn and Spring are virtually identical across years, so the YoY gap sits entirely in Summer.
+- **Monthly segment timeline:** shows periods where Premium spending dipped below Standard.
+- **Segment comparison 2024 vs. 2025:** the 2025 contraction comes from reduced Premium spending.
+- **Category comparison 2024 vs. 2025:** performance across Sports, Electronics, Home and Clothing.
+- **Category x segment cross-analysis (filtered to 2025):** Premium cuts hit Home, Electronics and Clothing, while Sports stayed resilient.
 
-  * *Diagnostic Finding:* When filtering by **2025**, this chart exposes that the Premium segment's reduction in spend directly impacted **Home, Electronics, and Clothing**, while the **Sports** category remained resilient[cite: 8, 9].
+![Detail View Filtered 2025](images/filter2025.png)
 
----
+## Findings
 
-## 🛠️ Methodology & Analytical Steps
+1. **The decline is seasonal, not structural.** Both years follow the same cyclical curve, with a sharp ~70% revenue drop in the summer months (June–August).
+2. **Premium customers drove the 2025 decline.** Premium accounts for 46.97% of revenue ($2.598M) and reduced spending on Home, Electronics and Clothing.
+3. **Sports is the resilient category.** It is the top revenue category ($1.4M+) and the only one where Premium customers kept strong purchasing habits in 2025.
 
-To understand the business state and isolate underlying drivers, a 4-step framework was executed:
+## Recommendations
 
-1. **Exploratory Phase & Metric Framing:** Defined core KPIs and structured business dimensions (*Country, Category, Customer Tier, Seasonality*)[cite: 5, 8].
-2. **Iterative Design & UX Refinement:** Overlaid YoY time-series charts to disprove a structural business decline and confirm recurring seasonality[cite: 5].
-3. **Root-Cause Diagnostics:** Leveraged cross-filtering in the Detail View to isolate 2025 revenue drops down to **Summer Season → Premium Clients → Home, Electronics & Clothing categories**[cite: 8, 9].
-4. **Strategic SCQA Formulation:** Synthesized findings into executive-ready communication (Situation, Complication, Question, Answer)[cite: 5, 8].
+1. **Anti-cyclical summer strategy (June–August):** run targeted mid-year campaigns, product bundles and seasonal promotions to stabilize cash flow.
+2. **Premium client retention program:** offer personalized loyalty incentives, exclusive offers and dedicated outreach to high-value clients.
+3. **Cross-selling via Sports:** use Sports as an entry point to cross-sell Home and Electronics products.
 
----
 
-## 💡 Key Business Insights & Next Steps
+## How to Open
 
-1. **Anti-Cyclical Summer Strategy (June – August):**
-   * *Insight:* Revenue experiences a sharp ~70% drop mid-year during the summer slump[cite: 5, 8].
-   * *Action:* Deploy targeted mid-year marketing campaigns, product bundles, and seasonal promotions to stabilize cash flow[cite: 5].
-2. **Premium Client Retention Program:**
-   * *Insight:* Premium clients drove the 2025 revenue decline by cutting back on Home, Electronics, and Clothing[cite: 8, 9].
-   * *Action:* Implement personalized loyalty incentives, exclusive offers, and dedicated account outreach for high-value clients[cite: 8, 9].
-3. **Cross-Selling via Sports Category:**
-   * *Insight:* Sports is the only category where Premium customers maintained strong purchasing habits in 2025[cite: 8, 9].
-   * *Action:* Use Sports products as an entry door to cross-sell items in Home and Electronics[cite: 8, 9].
+- **Power BI:** download the `.pbix` file (*add file name*) and open it with Power BI Desktop.
 
----
+## Tools
 
-## 🚀 Tools & Technologies
-
-* **Power BI Desktop:** Data modeling, interactive visual design, and DAX measure development.
-* **DAX (Data Analysis Expressions):** Time-intelligence calculations, YoY growth metrics, and conditional formatting.
-* **Markdown & SCQA Framework:** Executive project documentation and asynchronous stakeholder reporting.
+- **Power BI Desktop:** data modeling, interactive dashboard design and UI/UX optimization.
+- **DAX:** time-intelligence measures, YoY comparisons and conditional formatting.
+- **Generative AI (Gemini & ChatGPT):** data interpretation, SCQA structuring, root-cause hypotheses and executive report drafting.
+- **Markdown & Git:** documentation and version control on GitHub.
